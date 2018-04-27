@@ -14,7 +14,6 @@ function svg1draw(){
   //check sides
   if(parseInt(sides)<3){
     sides = 3;
-    document.getElementById('sidetext').value = "3";
   }
 
   //generate polygon
@@ -42,7 +41,7 @@ function svg2draw(){
 
   var differ = 360 / sides
   var endX = 250 + parseInt(r);
-  var startdegree = 270;
+  var startdegree = 90;
   var svvg = document.getElementById('originpi2');
 
   //add nwe lines
