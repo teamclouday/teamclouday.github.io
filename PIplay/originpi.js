@@ -11,6 +11,12 @@ function svg1draw(){
   var length = r / (Math.cos(degree));
   var pointstr = computePoints(sides,length);
 
+  //check sides
+  if(parseInt(sides)<3){
+    sides = 3;
+    document.getElementById('sidetext').value = "3";
+  }
+
   //generate polygon
   var newPoly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
   newPoly.setAttribute("points",pointstr);
