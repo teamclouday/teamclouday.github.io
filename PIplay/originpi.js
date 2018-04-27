@@ -1,10 +1,15 @@
 //change circle size of two svg
 function svg1draw(){
+  //set circle size
   var r = document.getElementById("radiastext").value;
   document.getElementById("origincircle1").setAttribute("r",r);
+
+  //compute polygen points
+  
 }
 
 function svg2draw(){
+  //set circle size
   var r = document.getElementById("radiastext").value;
   var s = document.getElementById("origincircle2");
   s.setAttribute("r",r.toString());
@@ -22,6 +27,7 @@ function svg2draw(){
   var startdegree = 270;
   var svvg = document.getElementById('originpi2');
 
+  //add nwe lines
   for(i=1; i<=sides; i++){
     var newLine = document.createElementNS('http://www.w3.org/2000/svg','line');
     newLine.setAttribute('x1',250);
@@ -38,6 +44,9 @@ function svg2draw(){
 }
 
 function reset(){
+  //delete new lines in svg2
   $('line[id="newLines"]').remove();
+
+  //delete polygen in svg1
 }
 
