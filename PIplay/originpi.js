@@ -7,10 +7,6 @@ function svg1draw(){
 
   //compute polygon points
   var sides = document.getElementById("sidetext").value;
-  //check sides
-  if(parseInt(sides)<3){
-    sides = 3;
-  }
   var degree = Math.PI / sides;
   var length = r / (Math.cos(degree));
   var pointstr = computePoints(sides,length);
@@ -33,12 +29,6 @@ function svg2draw(){
 
   //draw lines
   var sides = document.getElementById("sidetext").value;
-  //check sides
-  if(parseInt(sides)<3){
-    sides = 3;
-    document.getElementById('sidetext').value = "3";
-  }
-
   var differ = 360 / sides
   var endX = 250 + parseInt(r);
   var startdegree = 90;
@@ -66,6 +56,11 @@ function reset(){
 
   //delete polygen in svg1
   $('polygon').remove();
+
+  //check sides
+  if(document.getElementById("sidetext").value<3){
+    document.getElementById('sidetext').value = 3;
+  }
 }
 
 function computePoints(sides,length){
