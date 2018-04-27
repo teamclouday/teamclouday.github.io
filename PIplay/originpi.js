@@ -7,14 +7,14 @@ function svg1draw(){
 
   //compute polygon points
   var sides = document.getElementById("sidetext").value;
-  var degree = Math.PI / sides;
-  var length = r / (Math.cos(degree));
-  var pointstr = computePoints(sides,length);
-
   //check sides
   if(parseInt(sides)<3){
     sides = 3;
   }
+  var degree = Math.PI / sides;
+  var length = r / (Math.cos(degree));
+  var pointstr = computePoints(sides,length);
+
 
   //generate polygon
   var newPoly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
