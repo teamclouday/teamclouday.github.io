@@ -3,16 +3,28 @@ function svg1draw(){
   //set circle size
   var r = document.getElementById("radiastext").value;
   document.getElementById("origincircle1").setAttribute("r",r);
+  var svvg = document.getElementById('originpi1');
 
-  //compute polygen points
-  
+  //compute polygon points
+  var sides = document.getElementById("sidetext").value;
+  var degree = Math.PI / sides;
+  var length = r / (Math.cos(degree));
+  var pointstr = computePoints(sides,length);
+
+  //generate polygon
+  var newPoly = document.createElementNS('http://www.w3.org/2000/svg','polygon');
+  newPoly.setAttribute("points",pointstr);
+  newPoly.setAttribute("stroke","blue");
+  newPoly.setAttribute("stroke-width","3px");
+  newPoly.setAttribute("fill","none");
+  newPoly.setAttribute("id","newPolygon");
+  svvg.appendChild(newPoly);
 }
 
 function svg2draw(){
   //set circle size
   var r = document.getElementById("radiastext").value;
-  var s = document.getElementById("origincircle2");
-  s.setAttribute("r",r.toString());
+  document.getElementById("origincircle2").setAttribute("r",r)
 
   //draw lines
   var sides = document.getElementById("sidetext").value;
@@ -48,5 +60,23 @@ function reset(){
   $('line[id="newLines"]').remove();
 
   //delete polygen in svg1
+  $('polygon').remove();
+}
+
+function computePoints(sides,length){
+  var startdegree = Math.PI / 2;
+  var differ = (2*Math.PI)/sides;
+  var resultls = new Array(sides);
+  //generate list
+  for(i=0;i<sides;i++){
+    var x = 250 + (length*(Math.cos(startdegree)));
+    var y = 200 - (length*(Math.sin(startdegree)));
+    var xy = x.toString() + "," + y.toString();
+    resultls[i] = xy;
+    startdegree += differ;
+  }
+
+  var result = resultls.join(' ');
+  return result;
 }
 
