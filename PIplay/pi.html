@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>π Playground</title>
+  <link href="pi.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <!--title of the page-->
+  <div id="mainhead">Welcome to 
+    <span style="color: white; text-shadow: 1px 1px 2px black;font-size: 28px;">
+      π
+    </span> Playground!
+  </div>
+  <hr/>
+  <!--intro to pi-->
+  <div id="intro">
+    <img src="https://previews.123rf.com/images/lkeskinen/lkeskinen1707/lkeskinen170702558/81521054-cartoon-image-of-pi-symbol.jpg" alt="Pi Image" align="left"/>
+    <br/>Brief history about π from <a href="https://en.wikipedia.org/wiki/Pi">Wiki</a>:<br/><br/>
+    The number π is a mathematical constant. 
+    Originally defined as <a href="https://www.wikihow.com/Calculate-Pi"><i>the ratio of a circle's circumference to its diameter</i></a>.<br/>
+    It now has various equivalent definitions and appears in many formulas in all areas of mathematics and physics.<br/>
+    It is approximately equal to <a href="https://www.piday.org/million/">3.14159</a>.<br/>
+    It has been represented by the Greek letter <a href="https://en.wikipedia.org/wiki/Pi_(letter)">π</a> since the mid-18th century, 
+    though it is also sometimes spelled out as "pi".<br/>
+    It is also called Archimedes’ constant.<br/><br/><br/>
+    Being an <a href="https://en.wikipedia.org/wiki/Irrational_number">irrational number</a>, π cannot be expressed exactly as a common fraction<br/>
+    (equivalently, its decimal representation never ends and never settles into a permanent repeating pattern).<br/><br/>
+    Still, fractions such as <i>22/7</i> and other <a href="https://en.wikipedia.org/wiki/Rational_number">rational numbers</a> are commonly used to approximate π.<br/><br/>
+    The digits appear to be randomly distributed.<br/>
+    In particular, the digit sequence of π is conjectured to satisfy a specific kind of statistical randomness, but to date, no proof of this has been discovered.<br/><br/>
+    Also, π is a <a href="https://en.wikipedia.org/wiki/Transcendental_number">transcendental number</a>; that is, a number that is not the root of any non-zero polynomial having rational coefficients. This transcendence of π implies that it is impossible to solve the ancient challenge of squaring the circle with a compass and straightedge.
+  </div>
+  <hr/>
+  <!--first play:about original calculation of pi-->
+  <div id="firstplay">
+    <h2>Origin of π</h2>
+    <svg id="originpi1" style="float: left;">
+      <circle id="origincircle1" cx="250" cy="200" r="100" fill="white" stroke="black" stroke-width="5"/>      
+      <line x1="0" y1="200" x2="500" y2="200" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+      <line x1="250" y1="0" x2="250" y2="400" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+    </svg>
+    <svg id="originpi2" style="float: right;">
+      <circle id="origincircle2" cx="250" cy="200" r="100" fill="white" stroke="black" stroke-width="5"/>      
+      <line x1="0" y1="200" x2="500" y2="200" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+      <line x1="250" y1="0" x2="250" y2="400" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+    </svg>
+    <div id="originpiinput">
+      <label>Enter the radius to draw:</label>
+      <input type="text" id="radiastext" value="100"/>
+      <label>Enter the side number of polygen:</label>
+      <input type="text" id="sidetext" value="3"/>
+      <input type="submit" value="Draw" id="submit" onclick="reset();svg1draw();svg2draw()"/>
+    </div>
+    <script src="pi.js"></script>
+  </div>
+</body>
+</html>
