@@ -115,8 +115,7 @@ body{
   z-index: 2;
 
   /*size*/
-  margin: 10px 20px 5px 20px;
-  width: 500px;
+  width: 450px;
   height: 400px;
   background-color: white;
 
@@ -130,8 +129,7 @@ body{
   z-index: 2;
 
   /*size*/
-  margin: 10px 20px 5px 20px;
-  width: 500px;
+  width: 450px;
   height: 400px;
   background-color: white;
 
@@ -150,7 +148,7 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-top: 5px;
-  width: 325px;
+  width: 95%;
   height: 380px;
 }
 
