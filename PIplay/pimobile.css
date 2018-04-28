@@ -1,0 +1,110 @@
+@media screen and (max-width:500px){
+ body{
+   z-index: 0;
+   margin: 0;
+ }
+
+ #mainhead{
+   z-index: 1;
+   font-size: 20px;
+   margin:5px 10px 5px 10px;
+   padding: 0;
+   border-width: 1px;
+   height: auto;
+ }
+
+ #mainhead span{
+   z-index: 2;
+   font-size: 25px;
+ }
+
+ #intro{
+   z-index: 1;
+   margin:5px 10px 5px 10px;
+   height: 300px;
+   border-radius: 8px;
+   border-width: 3px;
+   font-size: 18px;
+   padding: 5px 5px 5px 5px;
+ }
+
+ #intro img{
+   z-index: 2;
+   max-width: 30%;
+   max-height: 30%;
+   border-radius: 8px;
+   margin: 0 5px 0 0;
+ }
+
+ #firstplay{
+   z-index: 1;
+   margin: 5px 10px 5px 10px;
+   border-radius: 8px;
+   border-width: 3px;
+   height:370px;
+ }
+
+ #firstplay h2{
+   z-index: 2;
+   font-size: 20px;
+   margin-top: 5px;
+   margin-bottom: 0;
+ }
+
+ #originpi1{
+   z-index: 2;
+   margin: 5px 10px 0px 10px;
+   width: 300px;
+   height: 300px;
+   border-radius: 8px;
+   border-width: 3px;
+ }
+
+ #originpi2{
+  z-index: 2;
+  margin: 5px 10px 0px 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+  border-width: 3px;
+}
+
+#originpiinput{
+  z-index: 2;
+  border-width: 3px;
+  height: 300px;
+  width:95%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#originpiinput label{
+  z-index: 3;
+  font-size: 18px;
+}
+
+#originpiinput #radiastext{
+  z-index: 3;
+  width: 90%;
+  height:28px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#originpiinput #sidetext{
+  z-index: 3;
+  width: 90%;
+  height:28px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#originpiinput #submit{
+  z-index: 3;
+  margin-top: 30%;
+  width: 200px;
+  margin-left: 5px;
+  margin-right: 10px;
+  font-size: 28px;
+}
+}
