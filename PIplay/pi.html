@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="no-store">
   <title>π Playground</title>
   <link href="pi.css" rel="stylesheet"/>
+  <link href="pimobile.css" rel="stylesheet"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -39,16 +40,31 @@
   <!--first play:about original calculation of pi-->
   <div id="firstplay">
     <h2>Origin of π</h2>
-    <table style="width: 100%;">
+    <table width="100%">
       <tr>
-        <td>
+        <td width="35%">
           <svg id="originpi1">
-            <circle id="origincircle1" cx="250" cy="200" r="100" fill="white" style="stroke: black;stroke-width: 3px;stroke-dasharray: 3 3;" />      
-            <line x1="0" y1="200" x2="500" y2="200" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
-            <line x1="250" y1="0" x2="250" y2="400" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+            <circle id="origincircle1" r="100" fill="white" style="stroke: black;stroke-width: 3px;stroke-dasharray: 3 3;" />      
+            <line id="horizontalline1" x1="0" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+            <line id="verticalline1" y1="0" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+            Perhaps your browser does not support svg here.
+            <script>
+              var centerX = document.getElementById("originpi1").clientWidth;
+              var centerY = document.getElementById("originpi1").clientHeight;
+              var halfX = centerX / 2;
+              var halfY = centerY / 2;
+              document.getElementById("origincircle1").setAttribute("cx",halfX);
+              document.getElementById("origincircle1").setAttribute("cy",halfY);
+              document.getElementById("horizontalline1").setAttribute("y1",halfY);
+              document.getElementById("horizontalline1").setAttribute("x2",centerX);
+              document.getElementById("horizontalline1").setAttribute("y2",halfY);
+              document.getElementById("verticalline1").setAttribute("x1",halfX);
+              document.getElementById("verticalline1").setAttribute("x2",halfX);
+              document.getElementById("verticalline1").setAttribute("y2",centerY);
+            </script>
           </svg>
         </td>
-        <td>
+        <td width="25%">
           <div id="originpiinput">
             <label>Enter the radius to draw:</label>
             <input type="text" id="radiastext" value="100"/>
@@ -57,16 +73,36 @@
             <input type="submit" value="Draw" id="submit" onclick="reset();svg1draw();svg2draw()"/>
           </div>
         </td>
-        <td>
+        <td width="35%">
           <svg id="originpi2">
-            <circle id="origincircle2" cx="250" cy="200" r="100" fill="white" stroke="black" stroke-width="5"/>      
-            <line x1="0" y1="200" x2="500" y2="200" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
-            <line x1="250" y1="0" x2="250" y2="400" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+            <circle id="origincircle2" r="100" fill="white" stroke="black" stroke-width="5"/>      
+            <line id="horizontalline2" x1="0" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+            <line id="verticalline2" y1="0" style="stroke: black;stroke-width: 2px;stroke-dasharray: 5 5;"/>
+            Perhaps your browser does not support svg here.
+            <script>
+                var centerX = document.getElementById("originpi2").clientWidth;
+                var centerY = document.getElementById("originpi2").clientHeight;
+                var halfX = centerX / 2;
+                var halfY = centerY / 2;
+                document.getElementById("origincircle2").setAttribute("cx",halfX);
+                document.getElementById("origincircle2").setAttribute("cy",halfY);
+                document.getElementById("horizontalline2").setAttribute("y1",halfY);
+                document.getElementById("horizontalline2").setAttribute("x2",centerX);
+                document.getElementById("horizontalline2").setAttribute("y2",halfY);
+                document.getElementById("verticalline2").setAttribute("x1",halfX);
+                document.getElementById("verticalline2").setAttribute("x2",halfX);
+                document.getElementById("verticalline2").setAttribute("y2",centerY);
+              </script>
           </svg>
         </td>
       </tr>
     </table>
     <script src="https://teamclouday.github.io/PIplay/originpi.js"></script>
+  </div>
+  <hr/>
+  <!--second play-->
+  <div style="width: 350px; height: 200px; border-style: dashed;">
+
   </div>
 </body>
 </html>
