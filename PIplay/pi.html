@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="no-store">
+  <meta http-equiv="cache-control" content="no-store">
   <title>π Playground</title>
   <link href="pi.css" rel="stylesheet"/>
   <link href="pimobile.css" rel="stylesheet"/>
@@ -20,7 +20,7 @@
   <hr/>
   <!--intro to pi-->
   <div id="intro">
-    <img src="https://previews.123rf.com/images/lkeskinen/lkeskinen1707/lkeskinen170702558/81521054-cartoon-image-of-pi-symbol.jpg" alt="Pi Image" align="left"/>
+    <img src="https://teamclouday.github.io/PIplay/pictures/pi.jpg" alt="Pi Image" align="left"/>
     <br/>Brief history about π from <a href="https://en.wikipedia.org/wiki/Pi">Wiki</a>:<br/><br/>
     The number π is a mathematical constant. 
     Originally defined as <a href="https://www.wikihow.com/Calculate-Pi"><i>the ratio of a circle's circumference to its diameter</i></a>.<br/>
@@ -100,9 +100,27 @@
     <script src="https://teamclouday.github.io/PIplay/originpi.js"></script>
   </div>
   <hr/>
-  <!--second play-->
-  <div style="width: 350px; height: 200px; border-style: dashed;">
+  <!--second play:about search in 10 million digits of pi-->
+  <div id="secondplay">
+    <h2>10 Million Digits of π</h2>
+    <input type="text" id="searchtext"/>
+    <input type="button" value="Search" id="searchbutton" onclick="search()" disabled/>
+    <textarea id="tenmillionpi" rows="1" wrap="hard" readonly></textarea>
+    <div id="control">
+      <input type="button" id="buttons" value="Previous" onclick="moveback()"/>
+      <div id="loadProgress">
+        <div id="bar"></div>
+      </div>
+      <input type="button" id="buttons" value="Next" onclick="movenext()"/>
+    </div>
+    <script src="https://teamclouday.github.io/PIplay/tenmillionpi.js" onload="load()"></script>
+  </div>
 
+
+  <hr/>
+  <!--Page End-->
+  <div id="pageend">
+    Page made by  Teamclouday
   </div>
 </body>
 </html>

@@ -28,6 +28,8 @@ body{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*#region intro*/
+
 #intro{
   z-index: 1;
 
@@ -77,6 +79,10 @@ body{
   color: orange;
 }
 
+/*#endregion*/
+
+/*#region firstplay*/
+
 #firstplay{
   z-index: 1;
 
@@ -100,7 +106,6 @@ body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   text-align: center;
-  width: 100%;
   
   /*background*/
   display: block;
@@ -228,4 +233,181 @@ body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: white;
   border-radius: 10px;
+}
+
+/*#endregion*/
+
+/*#region secondplay*/
+
+#secondplay{
+  z-index: 1;
+
+  /*background settings*/
+  display: block;
+  margin: 10px 20px 10px 20px;
+  width: auto;
+  height: 450px;
+  background-color: rgb(112, 180, 1);
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(64, 104, 0);
+  overflow: auto;
+}
+
+#secondplay h2{
+  z-index: 2;
+
+  /*font settings*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  
+  /*background*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 350px;
+  box-shadow: 3px 3px 3px rgb(64, 104, 0),-3px 3px 3px rgb(64, 104, 0);
+}
+
+#secondplay #searchtext{
+  z-index: 2;
+
+  /*background*/
+  display: block;
+  border-style: hidden;
+  background-color: rgb(64, 104, 0);
+  margin-top: 10px;
+  margin-left: calc(50% - 200px);
+  margin-right: auto;
+  width: 400px;
+  float: left;
+  
+  /*font settings*/
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+#searchtext:focus ~ #tenmillionpi{
+  filter: blur(5px);
+}
+
+#secondplay #searchbutton{
+  z-index: 2;
+
+  /*size*/
+  float: left;
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  height: 30px;
+  width: 100px;
+  padding: 0;
+
+  /*style*/
+  font-size: 25px;
+  background-color: rgb(64, 104, 0);
+  border: none;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+#tenmillionpi{
+  z-index: 2;
+
+  /*size*/
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1330px;
+  height: 180px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+  background-color: rgb(6, 70, 0);
+  border-radius: 30px;
+  
+  /*font*/
+  font-size: 160px;
+  color: white;
+}
+
+#secondplay #control{
+  z-index: 2;
+
+  /*size*/
+  width: 1000px;
+  height:60px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+} 
+
+#secondplay #loadProgress{
+  z-index: 3;
+  /*style*/
+  width: 500px;
+  margin:10px 50px 10px 50px;
+  float: left;
+  background-color: rgb(6, 70, 0);
+}
+
+#secondplay #bar{
+  z-index: 4;
+  margin-top: 0;
+  height: 40px;
+  width: 0;
+  background-color: rgb(112, 180, 1);
+  text-align: center;
+  font-size: 25px;
+}
+
+#secondplay #buttons{
+  z-index: 3;
+
+  /*size*/
+  float: left;
+  width: 200px;
+  height: 60px;
+
+  /*style*/
+  border-radius: 20px;
+  border: none;
+  font-size: 35px;
+}
+
+#secondplay #buttons:hover{
+  color: white;
+  background-color: rgb(6, 70, 0);
+}
+
+/*#endregion*/
+
+
+
+#pageend{
+  z-index: 1;
+
+  /*background*/
+  display: block;
+  background: linear-gradient(to right,orange,black,orange);
+  margin-top: 5px;
+  margin-bottom: 0px;
+  border-style: solid;
+  border-color: rgb(230, 103, 0);
+  border-width: 3px;
+
+  /*font setting*/
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  text-shadow: 3px 3px 4px orange;
+  overflow: hidden;
 }

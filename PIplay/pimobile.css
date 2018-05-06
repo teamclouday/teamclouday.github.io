@@ -18,6 +18,8 @@
    font-size: 25px;
  }
 
+/*#region intro*/
+
  #intro{
    z-index: 1;
    margin:5px 10px 5px 10px;
@@ -35,6 +37,10 @@
    border-radius: 8px;
    margin: 0 5px 0 0;
  }
+
+/*#endregion*/
+
+/*#region firstplay*/
 
  #firstplay{
    z-index: 1;
@@ -106,5 +112,94 @@
   margin-left: 5px;
   margin-right: 10px;
   font-size: 28px;
+}
+
+/*#endregion*/
+
+/*#region secondplay*/
+#secondplay{
+  z-index: 1;
+  margin: 5px 10px 5px 10px;
+  border-radius: 8px;
+  border-width: 3px;
+  height:300px;
+}
+
+#secondplay h2{
+  z-index: 2;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  width: 200px;
+}
+
+#secondplay #searchtext{
+  z-index: 2;
+  margin-left: calc(50% - 150px);
+  width: 300px;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#searchtext:focus ~ #tenmillionpi{
+  filter: blur(2px);
+}
+
+#secondplay #searchbutton{
+  z-index: 2;
+  margin-left: calc(50% - 75px);
+  width: 150px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#tenmillionpi{
+  z-index: 2;
+  width: 90%;
+  height: 35px;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#secondplay #control{
+  z-index: 2;
+  width: 95%;
+  height: auto;
+  margin-top: 0;
+}
+
+#secondplay #buttons{
+  z-index: 3;
+  font-size: 25px;
+  height: 30px;
+  width: 94%;
+  margin-left: 3%;
+  border-radius: 0;
+}
+
+#secondplay #loadProgress{
+  z-index: 3;
+  float: left;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#secondplay #bar{
+  z-index: 4;
+  height: 30px;
+  font-size: 15px;
+}
+
+/*#endregion*/
+
+#pageend{
+  z-index: 1;
+  margin:0;
+  border:hidden;
+  font-size: 20px;
 }
 }
