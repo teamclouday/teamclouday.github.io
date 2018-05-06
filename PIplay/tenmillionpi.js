@@ -100,7 +100,7 @@ function search(){
   outputArray = null;
   outputIndex = null;
 
-  var height = bar.offsetHeight;
+  var height = document.getElementById("loadProgress").offsetHeight;
   //change the bar here
   bar.style.marginLeft = "10px";
   bar.style.marginRight = "10px";
