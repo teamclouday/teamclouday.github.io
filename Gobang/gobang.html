@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <link href="gobang.css" rel="stylesheet">
+  <script src="./tools/jquery-3.3.1.js" type="text/javascript"></script>
+  <script src="gobang.js" type="text/javascript"></script>
+  <title>Gobang</title>
+</head>
+<body>
+  <div id="menuBar">
+    <input type="button" value="Restart" id="menuButton" onclick="restart()">
+    <input type="button" value="Withdraw" id="menuButton" onclick="withdraw()">
+    <input type="button" value="Button" id="menuButton" onclick="win()">
+  </div>
+  <svg id="svg">
+    Perhaps your browser does not support SVG
+    <rect id="svgRect" y="0" height="10" style="fill: rgb(85, 52, 0);"/>
+  </svg>
+</body>
+</html>
