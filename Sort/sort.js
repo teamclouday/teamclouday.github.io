@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //alert("Please open this page on PC!");
+    alert("Please open this page on PC!");
     let disnum = ($("#boxes").innerWidth() / 3) / 20;
     for(let i = 0; i < 10; i++){
         let box = document.createElement("div");
