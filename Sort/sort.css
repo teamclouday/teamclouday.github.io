@@ -1,0 +1,66 @@
+body{
+    display: block;
+}
+
+#button{
+    height: 50px;
+    width: 200px;
+    display: block;
+    font-size: 25px;
+    border-radius: 10px;
+    float: left;
+    margin-left: 20px;
+}
+
+#buttons{
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#boxes{
+    display: block;
+    background-color: rgb(36, 0, 156);
+    height: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.box{
+    display: block;
+    height: 100px;
+    width: 100px;
+    border: none;
+    background-color: #18bb98;
+    float: left;
+    font-size: 40px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.sortButtons{
+    border-style: dashed;
+    border-width: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 120px;
+}
+
+span{
+    margin-left: 1%;
+    margin-right: 1%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 48%;
+    display: block;
+    float: left;
+}
+
+span:hover{
+    background-color: darkgray;
+}
