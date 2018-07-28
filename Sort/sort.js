@@ -1,3 +1,5 @@
+var selection = 1;
+
 $(document).ready(function () {
     let scaler = $("#boxes").innerWidth() / 1500;
     let disnum = (scaler * 500) / 20;
@@ -41,6 +43,7 @@ function generateNums(){
         let num = Math.floor(Math.random() * 1000);
         $("#box" + i).text(num);
     }
+    document.getElementsByName("startButton")[0].disabled = false;
 }
 
 // Clear button function
@@ -48,4 +51,17 @@ function clearAll(){
     for(let i = 0; i < 10; i++){
         $("#box" + i).text("");
     }
+    $("span").css("background-color", "white");
+    $("span").css("color", "black");
+    $(".sortButtons #sort1").css("background-color", "#a0e9d9");
+    $(".sortButtons #sort1").css("color", "rgb(36, 0, 156)");
+    document.getElementsByName("startButton")[0].disabled = true;
+}
+
+function sort(num){
+    $("span").css("background-color", "white");
+    $("span").css("color", "black");
+    selection = num;
+    $(".sortButtons #sort" + num).css("background-color", "#a0e9d9");
+    $(".sortButtons #sort" + num).css("color", "rgb(36, 0, 156)");
 }
