@@ -1,7 +1,5 @@
-var scaler;
-
 $(document).ready(function () {
-    scaler = $("#boxes").innerWidth() / 1500;
+    let scaler = $("#boxes").innerWidth() / 1500;
     let disnum = (scaler * 500) / 20;
     $("#boxes").css("height", scaler * 100 + "px");
     for(let i = 0; i < 10; i++){
@@ -22,17 +20,18 @@ $(document).ready(function () {
     });
 
     $("span").ready(function(){
-        $("span").css("height", scaler * 30 + "px");
-        $("span").css("line-height", scaler * 30 + "px");
-        $("span").css("font-size", scaler * 20 + "px");
-        $(".sortButtons").css("height", scaler * 120 + "px");
+        let myWith = $(".sortButtons").innerWidth();
+        $("span").css("height", myWith / 30 + "px");
+        $("span").css("line-height", myWith / 30 + "px");
+        $("span").css("font-size", myWith / 45 + "px");
+        $(".sortButtons").css("height", myWith / 30 * 4 + "px");
     });
 
     $("#button").ready(function(){
-        $(".buttons").css("width", scaler * 680 + "px");
-        $("[id=button]").css("height", scaler * 50 + "px");
-        $("[id=button]").css("width", scaler * 200 + "px");
-        $("[id=button]").css("font-size", scaler * 25 + "px");
+        let myWith = $(".buttons").innerWidth() / 900;
+        $("[id=button]").css("height", myWith * 50 + "px");
+        $("[id=button]").css("font-size", myWith * 25 + "px");
+        $(".buttons").css("height", myWith * 50 + "px");
     })
 });
 

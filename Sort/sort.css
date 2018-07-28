@@ -6,12 +6,13 @@ body{
     display: block;
     border-radius: 10px;
     float: left;
-    margin-left: 20px;
+    margin-left: 4%;
+    width: 28%;
 }
 
 .buttons{
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20%;
+    margin-right: 20%;
     display: block;
 }
 

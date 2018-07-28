@@ -1,4 +1,4 @@
-@media screen and (max-width:500px){
+@media screen and (max-width:800px){
     body{
         margin: 0;
     }
@@ -9,14 +9,17 @@
     }
 
     #button{
-        margin-left: 5px;
         border-radius: 5px;
     }
 
+    .buttons{
+        margin: 0;
+    }
+
     .sortButtons{
-        margin-left: 10%;
-        margin-right: 10%;
+        margin: 0;
         border-width: 2px;
+        border-radius: 5px;
     }
 
     hr{
