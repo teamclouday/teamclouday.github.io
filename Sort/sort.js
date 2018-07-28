@@ -15,10 +15,10 @@ $(document).ready(function () {
         $("#boxes").append(box);
     }
     $(".box").ready(function(){
-        $(".box").css("height", scaler * 100 + "px");
-        $(".box").css("width", scaler * 100 + "px");
-        $(".box").css("font-size", scaler * 40 + "px");
-        $(".box").css("line-height", scaler * 100 + "px");
+        $("[class=box]").css("height", scaler * 100 + "px");
+        $("[class=box]").css("width", scaler * 100 + "px");
+        $("[class=box]").css("font-size", scaler * 40 + "px");
+        $("[class=box]").css("line-height", scaler * 100 + "px");
     });
 
     $("span").ready(function(){
@@ -56,6 +56,8 @@ function clearAll(){
     $(".sortButtons #sort1").css("background-color", "#a0e9d9");
     $(".sortButtons #sort1").css("color", "rgb(36, 0, 156)");
     document.getElementsByName("startButton")[0].disabled = true;
+    $("[class=box]").css("background-color", "#18bb98");
+    $("[class=box]").css("color", "black");
 }
 
 function sort(num){
