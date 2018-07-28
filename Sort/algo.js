@@ -13,12 +13,21 @@ function swap(box1, box2){
 function emphasis(box1, box2){
     $("[class=box]").css("background-color", "#18bb98");
     $("[class=box]").css("color", "black");
-    box1.animate({backgroundColor: "white"}, 400);
-    box2.animate({backgroundColor: "white"}, 400);
-    box1.animate({color: "red"}, 400);
-    box2.animate({color: "red"}, 400);
+    box1.animate({backgroundColor: "white"}, 300);
+    box2.animate({backgroundColor: "white"}, 300);
+    box1.animate({color: "red"}, 300);
+    box2.animate({color: "red"}, 300);
     return new Promise(resolve => 
-        setTimeout(resolve, 1500));
+        setTimeout(resolve, 1000));
+}
+
+function undoemphasis(box1, box2){
+    box1.animate({backgroundColor: "#18bb98"}, 200);
+    box2.animate({backgroundColor: "#18bb98"}, 200);
+    box1.animate({color: "black"}, 200);
+    box2.animate({color: "black"}, 200);
+    return new Promise(resolve => 
+        setTimeout(resolve, 800));
 }
 
 function startSorting(){
@@ -66,6 +75,7 @@ async function Bubble(){
             if(Number(box1.text()) > Number(box2.text())){
                 await swap(box1, box2);
             }
+            await undoemphasis(box1, box2);
         }
     }
 }
