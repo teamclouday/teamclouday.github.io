@@ -1,6 +1,9 @@
+var scaler;
+
 $(document).ready(function () {
-    alert("Please open this page on PC!");
-    let disnum = ($("#boxes").innerWidth() / 3) / 20;
+    scaler = $("#boxes").innerWidth() / 1500;
+    let disnum = (scaler * 500) / 20;
+    $("#boxes").css("height", scaler * 100 + "px");
     for(let i = 0; i < 10; i++){
         let box = document.createElement("div");
         box.setAttribute("class", "box");
@@ -11,6 +14,12 @@ $(document).ready(function () {
         });
         $("#boxes").append(box);
     }
+    $(".box").ready(function(){
+        $(".box").css("height", scaler * 100 + "px");
+        $(".box").css("width", scaler * 100 + "px");
+        $(".box").css("font-size", scaler * 40 + "px");
+        $(".box").css("line-height", scaler * 100 + "px");
+    })
 });
 
 // Generate button function

@@ -22,7 +22,6 @@ body{
 #boxes{
     display: block;
     background-color: rgb(36, 0, 156);
-    height: 100px;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 20px;
@@ -30,14 +29,10 @@ body{
 
 .box{
     display: block;
-    height: 100px;
-    width: 100px;
     border: none;
     background-color: #18bb98;
     float: left;
-    font-size: 40px;
     text-align: center;
-    line-height: 100px;
 }
 
 .sortButtons{
