@@ -3,17 +3,13 @@ body{
 }
 
 #button{
-    height: 50px;
-    width: 200px;
     display: block;
-    font-size: 25px;
     border-radius: 10px;
     float: left;
     margin-left: 20px;
 }
 
-#buttons{
-    width: 680px;
+.buttons{
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -40,15 +36,11 @@ body{
     border-width: 5px;
     margin-left: 20%;
     margin-right: 20%;
-    height: 120px;
 }
 
 span{
     margin-left: 1%;
     margin-right: 1%;
-    height: 30px;
-    line-height: 30px;
-    font-size: 20px;
     font-weight: bold;
     text-align: center;
     width: 48%;

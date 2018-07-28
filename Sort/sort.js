@@ -19,6 +19,20 @@ $(document).ready(function () {
         $(".box").css("width", scaler * 100 + "px");
         $(".box").css("font-size", scaler * 40 + "px");
         $(".box").css("line-height", scaler * 100 + "px");
+    });
+
+    $("span").ready(function(){
+        $("span").css("height", scaler * 30 + "px");
+        $("span").css("line-height", scaler * 30 + "px");
+        $("span").css("font-size", scaler * 20 + "px");
+        $(".sortButtons").css("height", scaler * 120 + "px");
+    });
+
+    $("#button").ready(function(){
+        $(".buttons").css("width", scaler * 680 + "px");
+        $("[id=button]").css("height", scaler * 50 + "px");
+        $("[id=button]").css("width", scaler * 200 + "px");
+        $("[id=button]").css("font-size", scaler * 25 + "px");
     })
 });
 

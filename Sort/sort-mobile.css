@@ -1,0 +1,26 @@
+@media screen and (max-width:500px){
+    body{
+        margin: 0;
+    }
+
+    #boxes{
+        margin: 0;
+        border-radius: 5px;
+    }
+
+    #button{
+        margin-left: 5px;
+        border-radius: 5px;
+    }
+
+    .sortButtons{
+        margin-left: 10%;
+        margin-right: 10%;
+        border-width: 2px;
+    }
+
+    hr{
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
