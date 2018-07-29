@@ -1,5 +1,6 @@
 // algorithms functions
 var box1, box2;
+var running = false;
 
 // swap box.text
 function swap(box1, box2){
@@ -7,30 +8,41 @@ function swap(box1, box2){
     box1.text(box2.text());
     box2.text(num);
     return new Promise(resolve => 
-        setTimeout(resolve, 500));
+        setTimeout(resolve, 200));
 }
 
 function emphasis(box1, box2){
-    $("[class=box]").css("background-color", "#18bb98");
-    $("[class=box]").css("color", "black");
-    box1.animate({backgroundColor: "white"}, 300);
-    box2.animate({backgroundColor: "white"}, 300);
-    box1.animate({color: "red"}, 300);
-    box2.animate({color: "red"}, 300);
-    return new Promise(resolve => 
-        setTimeout(resolve, 1000));
+    box1.animate({backgroundColor: "white"}, 200);
+    box1.animate({color: "red"}, 200);
+    if(typeof box2 != "undefined"){
+        box2.animate({backgroundColor: "white"}, 200);
+        box2.animate({color: "red"}, 200);
+        return new Promise(resolve => 
+            setTimeout(resolve, 1000));
+    }
+    else{
+        return new Promise(resolve => 
+            setTimeout(resolve, 500));
+    }
 }
 
 function undoemphasis(box1, box2){
-    box1.animate({backgroundColor: "#18bb98"}, 200);
-    box2.animate({backgroundColor: "#18bb98"}, 200);
-    box1.animate({color: "black"}, 200);
-    box2.animate({color: "black"}, 200);
-    return new Promise(resolve => 
-        setTimeout(resolve, 800));
+    box1.animate({backgroundColor: "#18bb98"}, 100);
+    box1.animate({color: "black"}, 100);
+    if(typeof box2 != "undefined"){
+        box2.animate({backgroundColor: "#18bb98"}, 100);
+        box2.animate({color: "black"}, 100);
+        return new Promise(resolve => 
+            setTimeout(resolve, 400));
+    }
+    else{
+        return new Promise(resolve => 
+            setTimeout(resolve, 250));
+    }
 }
 
 function startSorting(){
+    running = !running;
     switch(selection){
         case 1:
             Bubble();
@@ -69,6 +81,7 @@ function startSorting(){
 async function Bubble(){
     for(let i = 0; i < 9; i++){
         for(let j = 0; j < (9-i); j++){
+            if(!running){return;}
             box1 = $("#box" + j);
             box2 = $("#box" + (j + 1));
             await emphasis(box1, box2);
@@ -81,8 +94,30 @@ async function Bubble(){
 }
 
 // Insertion Sort
-function Insertion(){
-
+async function Insertion(){
+    let i, j;
+    for(i = 1; i < 10; i++){
+        if(!running){return;}
+        let box1 = $("#box" + i);
+        let box2 = $("#box" + (i-1));
+        await emphasis(box1, box2);
+        if(Number(box1.text()) < Number(box2.text())){
+            let temp = Number(box1.text());
+            await undoemphasis(box1, box2);
+            for(j = i - 1; j >= 0 && Number($("#box"+j).text()) > temp; j--){
+                let box3 = $("#box" + (j+1));
+                let box4 = $("#box" + j);
+                await emphasis(box3, box4);
+                box3.text(box4.text());
+                await undoemphasis(box3, box4);
+            }
+            let box3 = $("#box" + (j+1));
+            await emphasis(box3);
+            box3.text(temp);
+            await undoemphasis(box3);
+        }
+        else{await undoemphasis(box1, box2);}
+    }
 }
 
 // Selection Sort
