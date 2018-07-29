@@ -105,6 +105,7 @@ async function Insertion(){
             let temp = Number(box1.text());
             await undoemphasis(box1, box2);
             for(j = i - 1; j >= 0 && Number($("#box"+j).text()) > temp; j--){
+                if(!running){return;}
                 let box3 = $("#box" + (j+1));
                 let box4 = $("#box" + j);
                 await emphasis(box3, box4);
@@ -121,8 +122,30 @@ async function Insertion(){
 }
 
 // Selection Sort
-function Selection(){
+async function Selection(){
+    for(let i = 0; i < 10; i++){
+        if(!running){return;}
+        let min = i;
+        let boxi = $("#box" + i);
+        for(let j = i + 1; j < 10; j++){
+            if(!running){return;}
+            let boxmin = $("#box" + min);
+            let boxj = $("#box" + j);
+            await emphasis(boxmin, boxj);
+            if(Number(boxmin.text()) > Number(boxj.text())){
+                min = j;
+                await undoemphasis(boxmin, boxj);
+            }
+            else{await undoemphasis(boxmin, boxj);}
+        }
 
+        if(min != i){
+            let boxmin = $("#box" + min);
+            await emphasis(boxmin, boxi);
+            await swap(boxi, boxmin);
+            await undoemphasis(boxmin, boxi);
+        }
+    }
 }
 
 // Shell Sort
