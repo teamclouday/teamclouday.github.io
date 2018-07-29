@@ -149,8 +149,35 @@ async function Selection(){
 }
 
 // Shell Sort
-function Shell(){
-
+async function Shell(){
+    let gap = 5;
+    while(gap > 0){
+        if(!running){return;}
+        for(i = gap; i < 10; i++){
+            if(!running){return;}
+            let boxi = $("#box"+i);
+            let boxgap = $("#box"+(i-gap));
+            await emphasis(boxi, boxgap);
+            let temp = Number(boxi.text());
+            await undoemphasis(boxi, boxgap);
+            let j;
+            for(j = i; j >= gap && Number($("#box"+(j-gap)).text()) > temp; j -= gap){
+                if(!running){return;}
+                let box1 = $("#box" + j);
+                let box2 = $("#box" + (j-gap));
+                await emphasis(box1, box2);
+                box1.text(box2.text());
+                await undoemphasis(box1, box2);
+            }
+            let boxj = $("#box" + j);
+            if(j != i){
+                await emphasis(boxj);
+                boxj.text(temp);
+                await undoemphasis(boxj);
+            }
+        }
+        gap = Math.floor(gap / 2.0);
+    }
 }
 
 // Merge Sort
