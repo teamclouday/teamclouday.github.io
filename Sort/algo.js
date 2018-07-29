@@ -180,16 +180,72 @@ async function Shell(){
 }
 
 // Merge Sort
-function Merge(){
+async function Merge(){
+    await sort(0, 9);
+    async function sort(low, high){
+        if(!running){return;}
+        let mid;
+        if(low < high){
+            mid = Math.floor((low + high) / 2.0);
+            await sort(low, mid);
+            await sort(mid + 1, high);
+            await merging(low, mid, high);
+        }
+        else{return;}
+    }
 
+    async function merging(start, mid, end){
+        let tmpArray = new Array(10);
+        let right = mid + 1;
+        let left = start;
+        let tmpIndex = start;
+        while(left <= mid && right <= end){
+            let box1 = $("#box"+left);
+            let box2 = $("#box"+right)
+            await emphasis(box1, box2);
+            if(Number(box1.text()) <= Number(box2.text())){
+                tmpArray[tmpIndex] = Number(box1.text());
+                tmpIndex++;
+                left++;
+            }
+            else{
+                tmpArray[tmpIndex] = Number(box2.text());
+                tmpIndex++;
+                right++;
+            }
+            await undoemphasis(box1, box2);
+        }
+        while(left <= mid){
+            let box = $("#box"+left);
+            await emphasis(box);
+            tmpArray[tmpIndex] = Number(box.text());
+            tmpIndex++;
+            left++;
+            await undoemphasis(box);
+        }
+        while(right <= end){
+            let box = $("#box"+right);
+            await emphasis(box);
+            tmpArray[tmpIndex] = Number(box.text());
+            tmpIndex++;
+            right++;
+            await undoemphasis(box);
+        }
+        for(let i = start; i <= end; i++){
+            let box = $("#box"+i);
+            await emphasis(box);
+            box.text(tmpArray[i]);
+            await undoemphasis(box);
+        }
+    }
 }
 
 // Heap Sort
-function Heap(){
+async function Heap(){
 
 }
 
 // Quick Sort
-function Quick(){
+async function Quick(){
 
 }
