@@ -1,5 +1,4 @@
 // algorithms functions
-var box1, box2;
 var running = false;
 
 // swap box.text
@@ -82,8 +81,8 @@ async function Bubble(){
     for(let i = 0; i < 9; i++){
         for(let j = 0; j < (9-i); j++){
             if(!running){return;}
-            box1 = $("#box" + j);
-            box2 = $("#box" + (j + 1));
+            let box1 = $("#box" + j);
+            let box2 = $("#box" + (j + 1));
             await emphasis(box1, box2);
             if(Number(box1.text()) > Number(box2.text())){
                 await swap(box1, box2);
