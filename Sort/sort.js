@@ -44,6 +44,7 @@ function generateNums(){
         $("#box" + i).text(num);
     }
     document.getElementsByName("startButton")[0].disabled = false;
+    running = false;
 }
 
 // Clear button function
@@ -58,6 +59,8 @@ function clearAll(){
     document.getElementsByName("startButton")[0].disabled = true;
     $("[class=box]").css("background-color", "#18bb98");
     $("[class=box]").css("color", "black");
+    selection = 1;
+    running = false;
 }
 
 function sort(num){
