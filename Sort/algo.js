@@ -200,6 +200,7 @@ async function Merge(){
         let left = start;
         let tmpIndex = start;
         while(left <= mid && right <= end){
+            if(!running){return;}
             let box1 = $("#box"+left);
             let box2 = $("#box"+right)
             await emphasis(box1, box2);
@@ -216,6 +217,7 @@ async function Merge(){
             await undoemphasis(box1, box2);
         }
         while(left <= mid){
+            if(!running){return;}
             let box = $("#box"+left);
             await emphasis(box);
             tmpArray[tmpIndex] = Number(box.text());
@@ -224,6 +226,7 @@ async function Merge(){
             await undoemphasis(box);
         }
         while(right <= end){
+            if(!running){return;}
             let box = $("#box"+right);
             await emphasis(box);
             tmpArray[tmpIndex] = Number(box.text());
@@ -232,6 +235,7 @@ async function Merge(){
             await undoemphasis(box);
         }
         for(let i = start; i <= end; i++){
+            if(!running){return;}
             let box = $("#box"+i);
             await emphasis(box);
             box.text(tmpArray[i]);
