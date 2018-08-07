@@ -246,7 +246,55 @@ async function Merge(){
 
 // Heap Sort
 async function Heap(){
+    for(let i = 4; i >= 0; i--){
+        if(!running){return;}
+        await heapify(10, i);
+    }
 
+    for(let i = 9; i >= 0; i--){
+        if(!running){return;}
+        let box1 = $("#box"+0);
+        let box2 = $("#box"+i);
+        await emphasis(box1, box2);
+        let temp = box1.text();
+        box1.text(box2.text());
+        box2.text(temp);
+        await undoemphasis(box1, box2);
+        await heapify(i, 0);
+    }
+
+    async function heapify(n, i){
+        let largest = i;
+        const left = 2 * i + 1;
+        const right = 2 * i + 2;
+        if(left < n && Number($("#box"+largest).text()) < Number($("#box"+left).text())){
+            if(!running){return;}
+            let box1 = $("#box"+largest);
+            let box2 = $("#box"+left);
+            await emphasis(box1, box2);
+            largest = left;
+            await undoemphasis(box1, box2);
+        }
+        if(right < n && Number($("#box"+largest).text()) < Number($("#box"+right).text())){
+            if(!running){return;}
+            let box1 = $("#box"+largest);
+            let box2 = $("#box"+right);
+            await emphasis(box1, box2);
+            largest = right;
+            await undoemphasis(box1, box2);
+        }
+        if(largest != i){
+            if(!running){return;}
+            let box1 = $("#box"+largest);
+            let box2 = $("#box"+i);
+            await emphasis(box1, box2);
+            let temp = box2.text();
+            box2.text(box1.text());
+            box1.text(temp);
+            await undoemphasis(box1, box2);
+            await heapify(n, largest);
+        }
+    }
 }
 
 // Quick Sort
