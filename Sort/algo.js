@@ -256,9 +256,7 @@ async function Heap(){
         let box1 = $("#box"+0);
         let box2 = $("#box"+i);
         await emphasis(box1, box2);
-        let temp = box1.text();
-        box1.text(box2.text());
-        box2.text(temp);
+        await swap(box1, box2);
         await undoemphasis(box1, box2);
         await heapify(i, 0);
     }
@@ -288,9 +286,7 @@ async function Heap(){
             let box1 = $("#box"+largest);
             let box2 = $("#box"+i);
             await emphasis(box1, box2);
-            let temp = box2.text();
-            box2.text(box1.text());
-            box1.text(temp);
+            await swap(box1, box2);
             await undoemphasis(box1, box2);
             await heapify(n, largest);
         }
@@ -299,5 +295,43 @@ async function Heap(){
 
 // Quick Sort
 async function Quick(){
-
+    await quickSort(0, 9);
+    async function quickSort(left, right){
+        if(!running){return;}
+        if((right-left) <= 0){
+            let box1 = $("#box"+left);
+            let box2 = $("#box"+right);
+            await emphasis(box1, box2);
+            await undoemphasis(box1, box2);
+            return;
+        }
+        let pivot = (Number($("#box"+left).text()) + Number($("#box"+right).text())) / 2;
+        let i = left; let j = right;
+        while(i < j){
+            if(!running){return;}
+            while(Number($("#box"+i).text()) < pivot){
+                if(!running){return;}
+                let box = $("#box"+i);
+                await emphasis(box);
+                await undoemphasis(box);
+                i++;
+            }
+            while(Number($("#box"+j).text()) > pivot){
+                if(!running){return;}
+                let box = $("#box"+j);
+                await emphasis(box);
+                await undoemphasis(box);
+                j--;
+            }
+            if(i <= j){
+                let box1 = $("#box"+i);
+                let box2 = $("#box"+j);
+                await emphasis(box1, box2);
+                await swap(box1, box2);
+                await undoemphasis(box1, box2);
+            }
+        }
+        await quickSort(left, i-1);
+        await quickSort(i, right);
+    }
 }
