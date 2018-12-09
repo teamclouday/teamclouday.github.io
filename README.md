@@ -1,4 +1,4 @@
 # My Websites
-I've been learning to write websites
+I'll post some of my recent websites here  
 
-They will be kept updating!
+Just for fun!
