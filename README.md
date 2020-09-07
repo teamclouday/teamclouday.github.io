@@ -1,12 +1,5 @@
-# My Websites
-I'll post some of my recent websites here  
+# About me
 
-Just for fun!
+I'll update information about my repositories and learning experiences, while playing with font design on static websites  
 
-------
-
-*Links*  
-
-[Gobang](https://teamclouday.github.io/Gobang/gobang.html)  
-[PIplay](https://teamclouday.github.io/PIplay/pi.html)  
-[Sort](https://teamclouday.github.io/Sort/sort.html)  
+Just for fun!  
