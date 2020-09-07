@@ -10,7 +10,7 @@ def update_about():
     """
     with open(os.path.join("subpage", "about", "index.html"), "r") as inFile:
         html = BeautifulSoup(inFile.read(), "lxml")
-    html.find('div', {'class':'last_update'}).string = "Last Update: {}".format(datetime.date(datetime.now()))
+    html.find('div', {'class':'last_update'}).string = "Last Update: {}".format(datetime.now().strftime("%Y-%m-%d %H:%M"))
     with open(os.path.join("subpage", "about", "index.html"), "wb") as outFile:
         outFile.write(html.prettify('utf-8'))
 
