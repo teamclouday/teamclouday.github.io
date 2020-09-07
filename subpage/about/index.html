@@ -1,138 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About Me</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/65px-Archlinux-icon-crystal-64.svg.png">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-</head>
-<style>
-    
-</style>
-<body>
-    <!-- header -->
-    <div id="page_header">
-        <div class="page_header_btn_group">
-            <button type="button" id="btn_home">Home</button>
-            <div id="page_header_title">About Me</div>
-        </div>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   About Me
+  </title>
+  <link href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/65px-Archlinux-icon-crystal-64.svg.png" rel="icon"/>
+  <script crossorigin="anonymous" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" src="https://code.jquery.com/jquery-3.5.1.slim.js">
+  </script>
+ </head>
+ <style>
+ </style>
+ <body>
+  <!-- header -->
+  <div id="page_header">
+   <div class="page_header_btn_group">
+    <button id="btn_home" type="button">
+     Home
+    </button>
+    <div id="page_header_title">
+     About Me
     </div>
-    <!-- body -->
-    <div id="page_body">
-    </div>
-    <!-- tailer -->
-    <div id="page_tailer">
-        <div id="page_tailer_text">Website developed by Teamclouday</div>
-    </div>
+   </div>
+  </div>
+  <!-- body -->
+  <div id="page_body">
+   <div class="paragraph_title">
+    As a person
+   </div>
+   <div class="paragraph">
+    I'm currently an undergraduate student, majoring in Computer Science.
+    <br/>
+    My favourite sport is football (or soccer in U.S.). I don't play well, but I love watching matches.
+    <br/>
+    I can play saxophone, as an amateur. In contrast, I love listening to classical music and electronic music.
+    <br/>
+    Starting from childhood, I love watching documentaries about the nature and animals. I also read a lot of science fiction novels.
+    <br/>
+    When I'm not obsessed by computer, I like to think about human and nature.
+    <br/>
+    I dream to create a living world in my computer, based on Realtime Rendering and Artificial Intelligence.
+   </div>
+   <div class="paragraph_title">
+    How I started as a Programmer
+   </div>
+   <div class="paragraph">
+    I started self-learning programming since 2016. My first learnt programming language was C#.
+    <br/>
+    Since then, I keep learning more languages, concepts, and related tools. SoloLearn helped me a lot as a beginner.
+   </div>
+   <div class="paragraph_title">
+    Programming Languages
+   </div>
+   <div class="paragraph">
+    So far, I've written programs in these programming languages:
+    <br/>
+    Python3, C/C++, C#, Java, JavaScript, Haskell
+    <br/>
+    Among them, Python3 and C/C++ are my favourite pick.
+    <br/>
+    Don't if it is counted as a language, but I'm experienced in LaTex.
+   </div>
+   <div class="paragraph_title">
+    Code Editors &amp; IDEs
+   </div>
+   <div class="paragraph">
+    I have been using Visual Studio Code since its early release, and it's the perfect tool for all my needs.
+    <br/>
+    When building Android apps, I usually use Android Studio.
+    <br/>
+    When programming on Windows, using C/C++, or C#, I often use Visual Studio.
+    <br/>
+    On Linux, I use Vim for fast code editing, and VSCode for long-term programming.
+   </div>
+   <div class="paragraph_title">
+    System Environment
+   </div>
+   <div class="paragraph">
+    On Windows, I'm using Windows 10.
+    <br/>
+    On Linux, my favourite distro is Arch Linux. I'm also familiar with Ubuntu.
+    <br/>
+    Currently, I'm using Arch Linux with Gnome, and X11 as backend.
+   </div>
+   <div class="paragraph_title">
+    Machine Learning
+   </div>
+   <div class="paragraph">
+    I'm not an expert on machine learning, but I'm experienced.
+    <br/>
+    So far, I've been using Scikit-Learn a lot to run classification and regression tasks.
+    <br/>
+    Talking about the concepts of each ML model, I just have some basic knowledge. Haven't tried to implement any of them yet.
+    <br/>
+    For neural networks, I have experience on TensorFlow 1 and TensorFlow 2. I prefer the simplicity of version 2.
+    <br/>
+    In TensorFlow version 2, I've done most training with the Keras API.
+    <br/>
+    Recently, I'm interested in neural networks related to audio and image.
+   </div>
+   <div class="paragraph_title">
+    Data Analysis
+   </div>
+   <div class="paragraph">
+    In order to archieve high accuracy in ML, I've learnt lots of data processing skills.
+    <br/>
+    I use NumPy and Pandas to process the dataset, and retrieve useful information. Then I use Matplotlib or Seaborn to visualize them.
+    <br/>
+    For easy access, I usually work on Jupyter Notebook (now using Jupyter Lab) to process the data.
+    <br/>
+    I think data analysis (and processing) is the most important step in ML, since the algorithms are often settled down.
+   </div>
+   <div class="paragraph_title">
+    Computer Graphics
+   </div>
+   <div class="paragraph">
+   </div>
+   <div class="last_update">
+    Last Update: 2020-09-07
+   </div>
+  </div>
+  <!-- tailer -->
+  <div id="page_tailer">
+   <div id="page_tailer_text">
+    Website developed by Teamclouday
+   </div>
+  </div>
+  <style>
+   body
+    {
+      padding: 20px;
+      background-color: #02255d;
+    }
 
-    <style>
-        body
-        {
-            padding: 20px;
-            background-color: #02255d;
-        }
+    #page_header 
+    {
+      width: 100%;
+      height: 100px;
+      border-radius: 10px;
+      background-color: rgb(0, 233, 213);
+      opacity: 0.8;
+      overflow: hidden;
+    }
 
-        #page_header
-        {
-            width: 100%;
-            height: 100px;
-            border-radius: 10px;
-            background-color: rgb(0, 233, 213);
-            opacity: 0.8;
-            overflow: hidden;
-        }
+    #page_body 
+    {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+      border-radius: 10px;
+      background-color: aquamarine;
+    }
 
-        #page_body
-        {
-            width: 100%;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            background-color: aquamarine;
-        }
+    #page_body .paragraph 
+    {
+      display: block;
+      width: auto;
+      margin-left: 100px;
+      margin-right: 100px;
+      margin-bottom: 20px;
+      cursor: default;
+      font-size: 22px;
+      font-weight: 600;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 
-        #page_tailer
-        {
-            width: 100%;
-            height: 80px;
-            border-radius: 10px;
-            background-color: rgb(100, 224, 255);
-            overflow: hidden;
-        }
+    #page_body .paragraph_title 
+    {
+      display: block;
+      width: auto;
+      margin-left: 80px;
+      margin-right: 80px;
+      cursor: default;
+      font-size: 26px;
+      font-weight: 600;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgb(133, 71, 0);
+      user-select: none;
+    }
 
-        #page_tailer_text
-        {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: fit-content;
-            font-size: 30px;
-            font-weight: 600;
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 80px;
-            color: rgb(32, 0, 73);
-            cursor: default;
-            user-select: none;
-        }
+    #page_body .last_update 
+    {
+      display: block;
+      width: auto;
+      margin-left: 100px;
+      margin-right: 100px;
+      cursor: default;
+      text-align: right;
+      font-size: 20px;
+      font-style: italic;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      user-select: none;
+    }
 
-        .page_header_btn_group
-        {
-            text-align: center;
-            height: 100%;
-            overflow: auto;
-        }
+    #page_tailer 
+    {
+      width: 100%;
+      height: 80px;
+      border-radius: 10px;
+      background-color: rgb(100, 224, 255);
+      overflow: hidden;
+    }
 
-        .page_header_btn_group button
-        {
-            display: inline-block;
-            cursor: pointer;
-            width: 200px;
-            height: 60px;
-            margin: 20px;
-            margin-left: 50px;
-            font-size: 24px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            border-radius: 10px;
-            border-style: none;
-            background-color: rgb(232, 251, 201);
-            color: black;
-            transition: 0.5s;
-            outline: none;
-        }
+    #page_tailer_text 
+    {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      font-size: 30px;
+      font-weight: 600;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 80px;
+      color: rgb(32, 0, 73);
+      cursor: default;
+      user-select: none;
+    }
 
-        .page_header_btn_group #page_header_title
-        {
-            display: inline-block;
-            cursor: default;
-            user-select: none;
-            width: 400px;
-            text-align: center;
-            margin-left: 50px;
-            font-size: 24px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: rgb(232, 251, 201);
-            height: 60px;
-            line-height: 60px;
-            border-radius: 10px;
-        }
+    .page_header_btn_group 
+    {
+      text-align: center;
+      height: 100%;
+      overflow: auto;
+    }
 
-        .page_header_btn_group button:hover
-        {
-            background-color: rgb(57, 143, 255);
-            color: white;
-        }
-    </style>
+    .page_header_btn_group button 
+    {
+      display: inline-block;
+      cursor: pointer;
+      width: 200px;
+      height: 60px;
+      margin: 20px;
+      margin-left: 50px;
+      font-size: 24px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border-radius: 10px;
+      border-style: none;
+      background-color: rgb(232, 251, 201);
+      color: black;
+      transition: 0.5s;
+      outline: none;
+    }
 
-    <script type="text/javascript">
-        $(document).ready(()=>{
-            // set events
-            $(".page_header_btn_group #btn_home").on('click', ()=>{
-                window.location.href = "https://teamclouday.github.io/";
-            });
-            // set body height
-            var height = $(window).height(); // TODO: remove auto height after fill in some content
-            $("#page_body").height(height - 280);
-        });
-    </script>
-</body>
+    .page_header_btn_group #page_header_title 
+    {
+      display: inline-block;
+      cursor: default;
+      user-select: none;
+      width: 400px;
+      text-align: center;
+      margin-left: 50px;
+      font-size: 24px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: rgb(232, 251, 201);
+      height: 60px;
+      line-height: 60px;
+      border-radius: 10px;
+    }
+
+    .page_header_btn_group button:hover 
+    {
+      background-color: rgb(57, 143, 255);
+      color: white;
+    }
+  </style>
+  <script type="text/javascript">
+   $(document).ready(() => {
+      // set events
+      $(".page_header_btn_group #btn_home").on('click', () => {
+        window.location.href = "https://teamclouday.github.io/";
+      });
+    });
+  </script>
+ </body>
 </html>
