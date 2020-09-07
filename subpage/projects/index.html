@@ -6,6 +6,129 @@
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/65px-Archlinux-icon-crystal-64.svg.png">
 </head>
 <body>
-    
+    <!-- header -->
+    <div id="page_header">
+        <div class="page_header_btn_group">
+            <button type="button" id="btn_home">Home</button>
+            <div id="page_header_title">My Projects</div>
+        </div>
+    </div>
+    <!-- body -->
+    <div id="page_body">
+    </div>
+    <!-- tailer -->
+    <div id="page_tailer">
+        <div id="page_tailer_text">Website developed by Teamclouday</div>
+    </div>
+
+    <style>
+        body
+        {
+            padding: 20px;
+            background-color: #02255d;
+        }
+
+        #page_header
+        {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            background-color: rgb(0, 233, 213);
+            opacity: 0.8;
+            overflow: hidden;
+        }
+
+        #page_body
+        {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background-color: aquamarine;
+        }
+
+        #page_tailer
+        {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            background-color: rgb(100, 224, 255);
+            overflow: hidden;
+        }
+
+        #page_tailer_text
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 80px;
+            color: rgb(32, 0, 73);
+            cursor: default;
+            user-select: none;
+        }
+
+        .page_header_btn_group
+        {
+            text-align: center;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .page_header_btn_group button
+        {
+            display: inline-block;
+            cursor: pointer;
+            width: 200px;
+            height: 60px;
+            margin: 20px;
+            margin-left: 50px;
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+            border-style: none;
+            background-color: rgb(232, 251, 201);
+            color: black;
+            transition: 0.5s;
+            outline: none;
+        }
+
+        .page_header_btn_group #page_header_title
+        {
+            display: inline-block;
+            cursor: default;
+            user-select: none;
+            width: 400px;
+            text-align: center;
+            margin-left: 50px;
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(232, 251, 201);
+            height: 60px;
+            line-height: 60px;
+            border-radius: 10px;
+        }
+
+        .page_header_btn_group button:hover
+        {
+            background-color: rgb(57, 143, 255);
+            color: white;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(()=>{
+            // set events
+            $(".page_header_btn_group #btn_home").on('click', ()=>{
+                window.location.href = "https://teamclouday.github.io/";
+            });
+            // set body height
+            var height = $(window).height(); // TODO: remove auto height after fill in some content
+            $("#page_body").height(height - 280);
+        });
+    </script>
 </body>
 </html>
