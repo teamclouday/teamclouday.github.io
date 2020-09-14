@@ -16,5 +16,5 @@ if __name__=="__main__":
             outFile.write(html.prettify('utf-8'))
     # update blog time
     # create assets folder
-    if not os.path.exists(os.path.join("subpage", "blogs", currentTime)):
-        os.makedirs(os.path.join("subpage", "blogs", currentTime))
+    if not os.path.exists(os.path.join("subpage", "blogs", "assets", currentTime)):
+        os.makedirs(os.path.join("subpage", "blogs", "assets", currentTime))
