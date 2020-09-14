@@ -25,10 +25,16 @@
     <div id="page_body_wrapper">
       <div id="page_body_work">
         <div class="page_body_title">Recent Work</div>
+        <div class="content">
+
+        </div>
       </div>
 
       <div id="page_body_blog">
         <div class="page_body_title">Recent Blog</div>
+        <div class="content">
+
+        </div>
       </div>
     </div>
   </div>
@@ -58,6 +64,19 @@
       margin-bottom: 20px;
       border-radius: 10px;
       background-color: aquamarine;
+    }
+
+    #page_body .content {
+      display: block;
+      border-style: solid;
+      border-radius: 20px;
+      background-color: rgb(194, 250, 231);
+      width: 80%;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
     }
 
     #page_tailer {
@@ -158,6 +177,7 @@
       // set body height
       var height = $(window).height();
       $("#page_body").height(height - 280);
+      $("#page_body .content").height(height - 380);
     });
   </script>
 </body>
