@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    My first music
+  </title>
+  <link
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/65px-Archlinux-icon-crystal-64.svg.png"
+    rel="icon" />
+  <script crossorigin="anonymous" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+    src="https://code.jquery.com/jquery-3.5.1.slim.js">
+  </script>
+</head>
+
+<body>
+  <!-- header -->
+  <div id="page_header">
+    <div class="page_header_btn_group">
+      <button id="btn_home" type="button">
+        Home
+      </button>
+      <div id="page_header_title">
+        First Song Made in LMMS
+      </div>
+    </div>
+  </div>
+  <!-- body -->
+  <div id="page_body">
+    <div class="normal">
+      Today, I finished my first song made in LMMS!<br />
+      It's the first time I actually make something in LMMS, though I have already installed this program for a year.
+    </div>
+    <div class="centered">
+      Old Time
+    </div>
+    <img class="image" alt="Time" src="https://cdn.pixabay.com/photo/2016/10/13/15/43/time-1738083_960_720.jpg">
+    <audio controls class="audio">
+      <source src="2020_09_13_23_09/Old Time.mp3" type="audio/mpeg">
+      Your browser does not support the mp3 audio.
+    </audio>
+    <div class="normal">
+      This piece comes from nowhere. It is started as a practicing project, and ended as a complete music.<br />
+      Now it feels like time traveling across the centuries.<br />
+    </div>
+    <div class="large">
+      Things that were treasured are now destroyed. Things that were famous are now unknown.
+    </div>
+    <div class="normal">
+      What remains is the steady pace of the time, and the feeling without joy or pain.
+    </div>
+    <div class="last_update">
+      Last Update: 2020-09-13 23:09
+    </div>
+  </div>
+  <!-- tailer -->
+  <div id="page_tailer">
+    <div id="page_tailer_text">
+      Website developed by Teamclouday
+    </div>
+  </div>
+  <style>
+    body {
+      padding: 20px;
+      background-color: #02255d;
+    }
+
+    #page_header {
+      width: 100%;
+      height: 100px;
+      border-radius: 10px;
+      background-color: rgb(0, 233, 213);
+      opacity: 0.8;
+      overflow: hidden;
+    }
+
+    #page_body {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: aquamarine;
+    }
+
+    #page_body .normal {
+      font-size: 22px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-top: 10px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #page_body .large {
+      font-size: 30px;
+      font-weight: 700;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin-top: 10px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #page_body .centered {
+      font-size: 30px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      text-align: center;
+      margin-top: 10px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #page_body .audio {
+      outline: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 50%;
+    }
+
+    #page_body .image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 40%;
+      border-radius: 20px;
+      border-style: solid;
+    }
+
+    #page_body .last_update {
+      display: block;
+      width: auto;
+      margin-left: 100px;
+      margin-right: 100px;
+      cursor: default;
+      text-align: right;
+      font-size: 20px;
+      font-style: italic;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      user-select: none;
+    }
+
+    #page_tailer {
+      width: 100%;
+      height: 80px;
+      border-radius: 10px;
+      background-color: rgb(100, 224, 255);
+      overflow: hidden;
+    }
+
+    #page_tailer_text {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+      font-size: 30px;
+      font-weight: 600;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 80px;
+      color: rgb(32, 0, 73);
+      cursor: default;
+      user-select: none;
+    }
+
+    .page_header_btn_group {
+      text-align: center;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .page_header_btn_group button {
+      display: inline-block;
+      cursor: pointer;
+      width: 200px;
+      height: 60px;
+      margin: 20px;
+      margin-left: 50px;
+      font-size: 24px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border-radius: 10px;
+      border-style: none;
+      background-color: white;
+      color: black;
+      transition: 0.5s;
+      outline: none;
+    }
+
+    .page_header_btn_group #page_header_title {
+      display: inline-block;
+      cursor: default;
+      user-select: none;
+      width: 400px;
+      text-align: center;
+      margin-left: 50px;
+      font-size: 24px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      background-color: white;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 10px;
+    }
+
+    .page_header_btn_group button:hover {
+      background-color: rgb(57, 143, 255);
+      color: white;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(() => {
+      // set events
+      $(".page_header_btn_group #btn_home").on('click', () => {
+        window.location.href = "https://teamclouday.github.io/";
+      });
+    });
+  </script>
+</body>
+
+</html>

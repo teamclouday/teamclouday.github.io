@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>My Blogs</title>
-  <link rel="icon"
-    href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/65px-Archlinux-icon-crystal-64.svg.png">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
-    integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-</head>
-
-<body>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   My Blogs
+  </title>
+  <link href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/65px-Archlinux-icon-crystal-64.svg.png" rel="icon"/>
+  <script crossorigin="anonymous" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" src="https://code.jquery.com/jquery-3.5.1.slim.js">
+  </script>
+ </head>
+ <body>
   <!-- header -->
   <div id="page_header">
-    <div class="page_header_btn_group">
-      <button type="button" id="btn_home">Home</button>
-      <div id="page_header_title">My Blogs</div>
+   <div class="page_header_btn_group">
+    <button id="btn_home" type="button">
+     Home
+    </button>
+    <div id="page_header_title">
+     My Blogs
     </div>
+   </div>
   </div>
   <!-- body -->
   <div id="page_body">
-    
+   <a href="2020_09_13_23_09.html" style="text-decoration: none;" tag="2020_09_13_23_09">
+    <div class="blog">
+     <div class="title">
+      My first music
+     </div>
+     <div class="abstract">
+      Today, I finished my first song made in LMMS!       It's the first time I actually make something in LMMS, though I have already installed this program for a year.... [Click to see more]
+     </div>
+    </div>
+   </a>
   </div>
   <!-- tailer -->
   <div id="page_tailer">
-    <div id="page_tailer_text">Website developed by Teamclouday</div>
+   <div id="page_tailer_text">
+    Website developed by Teamclouday
+   </div>
   </div>
-
   <style>
-    body {
+   body {
       padding: 20px;
       background-color: #02255d;
     }
@@ -152,15 +165,13 @@
       color: white;
     }
   </style>
-
   <script type="text/javascript">
-    $(document).ready(() => {
+   $(document).ready(() => {
       // set events
       $(".page_header_btn_group #btn_home").on('click', () => {
         window.location.href = "https://teamclouday.github.io/";
       });
     });
   </script>
-</body>
-
+ </body>
 </html>
