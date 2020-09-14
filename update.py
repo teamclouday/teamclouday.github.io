@@ -1,4 +1,7 @@
-# a script to update main page (recent work and recent blog)
+# a script to update
+# main page (recent work and recent blog)
+# blog page (recent added new blogs)
+# project page (recent added new projects)
 
 import os
 from datetime import datetime
