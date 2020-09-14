@@ -20,7 +20,7 @@
   </div>
   <!-- body -->
   <div id="page_body">
-
+    
   </div>
   <!-- tailer -->
   <div id="page_tailer">
@@ -46,8 +46,45 @@
       width: 100%;
       margin-top: 20px;
       margin-bottom: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       border-radius: 10px;
       background-color: aquamarine;
+    }
+
+    #page_body .blog {
+      display: block;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      border-style: solid;
+      background-color: rgb(176, 248, 224);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      cursor: pointer;
+      outline: none;
+      color: black;
+      border-color: black;
+      transition: 0.5s;
+    }
+
+    #page_body .blog:hover {
+      color: white;
+      background-color: rgb(0, 74, 143);
+      border-color: black;
+    }
+
+    #page_body .blog .title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    #page_body .blog .abstract {
+      font-size: 22px;
     }
 
     #page_tailer {
@@ -122,9 +159,6 @@
       $(".page_header_btn_group #btn_home").on('click', () => {
         window.location.href = "https://teamclouday.github.io/";
       });
-      // set body height
-      var height = $(window).height(); // TODO: remove auto height after fill in some content
-      $("#page_body").height(height - 280);
     });
   </script>
 </body>
